@@ -8,7 +8,7 @@ GID ?= $(shell id -g)
 COMPOSE ?= UID=$(UID) GID=$(GID) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) KERNEL_PROFILE=$(KERNEL_PROFILE) docker compose
 RUN_IN_CONTAINER = $(COMPOSE) run --rm kernel-builder
 
-.PHONY: container fetch patch configure kernel package testbundle shell clean profile
+.PHONY: container fetch patch configure kernel package testbundle usbimg nativeimg shell clean profile
 
 container:
 	$(COMPOSE) build kernel-builder
@@ -30,6 +30,12 @@ package:
 
 testbundle:
 	$(RUN_IN_CONTAINER) ./scripts/build-testbundle.sh
+
+usbimg:
+	$(RUN_IN_CONTAINER) ./scripts/build-usb-image.sh
+
+nativeimg:
+	$(RUN_IN_CONTAINER) ./scripts/build-a1222-native-image.sh
 
 shell:
 	$(RUN_IN_CONTAINER) bash

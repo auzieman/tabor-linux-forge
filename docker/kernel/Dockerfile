@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     ccache \
     cpio \
+    dosfstools \
     file \
     flex \
     gcc-powerpc-linux-gnu \
@@ -15,6 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libelf-dev \
     libssl-dev \
     make \
+    mtools \
     rsync \
     u-boot-tools \
     wget \

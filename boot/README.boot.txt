@@ -5,7 +5,9 @@ This bundle is intended for non-destructive board bring-up.
 
 Contents:
 - boot/zImage
+- boot/uImage
 - boot/tabor-a1222.dtb
+- boot/tabor2.dtb
 - menu/boot.cmd.txt
 - menu/boot.scr.txt
 

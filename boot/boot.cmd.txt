@@ -2,7 +2,7 @@
 # Adjust device numbers and memory addresses to match the real firmware setup.
 #
 # usb start
-# fatload usb 0:1 ${kernel_addr_r} /boot/zImage
-# fatload usb 0:1 ${fdt_addr_r} /boot/tabor-a1222.dtb
+# fatload usb 0:1 ${kernel_addr_r} /boot/uImage
+# fatload usb 0:1 ${fdt_addr_r} /boot/tabor2.dtb
 # setenv bootargs console=ttyS0,115200 root=/dev/ram0 rw
 # bootm ${kernel_addr_r} - ${fdt_addr_r}

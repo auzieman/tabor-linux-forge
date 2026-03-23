@@ -108,12 +108,27 @@ Stage a non-destructive USB test bundle:
 make testbundle
 ```
 
+Build a `dd`-able FAT USB image from that bundle:
+
+```bash
+make usbimg
+```
+
+Build an experimental A1222-native raw image with `tabor2.dtb` and `uImage`
+at forum-reported SD/MMC block offsets:
+
+```bash
+make nativeimg
+```
+
 The resulting files land under:
 
 - `artifacts/tabor/zImage`
 - `artifacts/tabor/dtbs/`
 - `artifacts/tabor/modules/`
 - `artifacts/testbundle/`
+- `artifacts/images/tabor-linux.img`
+- `artifacts/images/tabor-a1222-native.img`
 
 All normal fetch/configure/build/package actions now run through the root-level Compose file at [docker-compose.yml](/home/auzieman/Projects/tabor-linux-forge/docker-compose.yml), which keeps the toolchain pinned and avoids polluting the host with build dependencies.
 
@@ -244,7 +259,9 @@ That keeps the early validation loop safe:
 The staged bundle currently contains:
 
 - `artifacts/testbundle/boot/zImage`
+- `artifacts/testbundle/boot/uImage`
 - `artifacts/testbundle/boot/tabor-a1222.dtb`
+- `artifacts/testbundle/boot/tabor2.dtb`
 - `artifacts/testbundle/menu/boot.cmd.txt`
 - `artifacts/testbundle/menu/boot.scr.txt`
 
@@ -257,6 +274,38 @@ The intended first-pass workflow is:
 5. keep the installed disk OS untouched during bring-up
 
 The bundled `boot.cmd.txt` is only an example. Memory addresses and USB device numbering may need to be adjusted to match the actual A1222 firmware environment.
+
+If you prefer a single image file, `make usbimg` creates a FAT-formatted superfloppy image at:
+
+- `artifacts/images/tabor-linux.img`
+
+You can write it with:
+
+```bash
+sudo dd if=artifacts/images/tabor-linux.img of=/dev/sdX bs=4M status=progress conv=fsync
+```
+
+Replace `/dev/sdX` with the actual USB device.
+
+## A1222 Native Image
+
+`make nativeimg` creates an experimental raw image at:
+
+- `artifacts/images/tabor-a1222-native.img`
+
+It currently stages:
+
+- `tabor2.dtb`
+- `uImage`
+
+using these default block offsets:
+
+- DTB at `0x32000`
+- kernel at `0x35000`
+
+Those offsets are based on user-reported working A1222/Tabor layouts from the
+Amigans forum thread and should be treated as an experimental native-boot path,
+not a finished release image.
 
 At this stage, success means:
 

@@ -9,6 +9,7 @@ MENU_DIR="${BUNDLE_DIR}/menu"
 KERNEL_IMAGE="${ARTIFACT_DIR}/zImage"
 DTB_SOURCE="${ARTIFACT_DIR}/dtbs/fsl/tabor-a1222.dtb"
 FALLBACK_DTB="${ARTIFACT_DIR}/dtbs/fsl/p1022ds_36b.dtb"
+UIMAGE_SOURCE="${ARTIFACT_DIR}/uImage"
 
 if [[ ! -f "${KERNEL_IMAGE}" ]]; then
   echo "Packaged kernel image missing. Run ./scripts/package-kernel.sh first." >&2
@@ -19,6 +20,10 @@ mkdir -p "${BOOT_DIR}" "${MENU_DIR}"
 
 cp "${KERNEL_IMAGE}" "${BOOT_DIR}/zImage"
 
+if [[ -f "${UIMAGE_SOURCE}" ]]; then
+  cp "${UIMAGE_SOURCE}" "${BOOT_DIR}/uImage"
+fi
+
 if [[ -f "${DTB_SOURCE}" ]]; then
   cp "${DTB_SOURCE}" "${BOOT_DIR}/tabor-a1222.dtb"
 elif [[ -f "${FALLBACK_DTB}" ]]; then
@@ -26,6 +31,10 @@ elif [[ -f "${FALLBACK_DTB}" ]]; then
 else
   echo "No Tabor or fallback P1022 DTB found under ${ARTIFACT_DIR}/dtbs" >&2
   exit 1
+fi
+
+if [[ -f "${BOOT_DIR}/tabor-a1222.dtb" ]]; then
+  cp "${BOOT_DIR}/tabor-a1222.dtb" "${BOOT_DIR}/tabor2.dtb"
 fi
 
 cp "${ROOT_DIR}/boot/README.boot.txt" "${BUNDLE_DIR}/README.boot.txt"
