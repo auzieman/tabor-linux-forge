@@ -1,0 +1,6 @@
+This file is a placeholder for a future generated boot script.
+
+Near-term intent:
+- keep the bundle human-readable
+- validate manual U-Boot boot commands first
+- generate a real boot.scr only after the board's exact firmware flow is confirmed

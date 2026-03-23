@@ -1,0 +1,3 @@
+include configs/series.local
+configs/fragments/tabor-core.cfg
+configs/fragments/tabor-dtb.cfg

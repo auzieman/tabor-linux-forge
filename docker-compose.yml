@@ -1,0 +1,17 @@
+services:
+  kernel-builder:
+    build:
+      context: .
+      dockerfile: docker/kernel/Dockerfile
+    image: tabor-linux-forge-kernel
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    environment:
+      ARCH: ${ARCH:-powerpc}
+      CROSS_COMPILE: ${CROSS_COMPILE:-powerpc-linux-gnu-}
+      KERNEL_PROFILE: ${KERNEL_PROFILE:-profiles/kernel/upstream-6.6-lts.env}
+      HOME: /tmp
+    user: "${UID:-1000}:${GID:-1000}"
+    stdin_open: true
+    tty: true

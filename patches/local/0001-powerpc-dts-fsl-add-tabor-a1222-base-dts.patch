@@ -1,0 +1,49 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Codex <codex@example.invalid>
+Date: Mon, 23 Mar 2026 18:00:00 -0700
+Subject: [PATCH] powerpc/dts/fsl: add Tabor A1222 base DTS
+
+Add a conservative A1222/Tabor starting point by reusing the upstream
+P1022DS 36-bit description as a base. This is intentionally minimal and
+is meant to provide a reviewable board entry point for later bring-up,
+not a claim of complete hardware support.
+---
+ arch/powerpc/boot/dts/fsl/Makefile        |  1 +
+ arch/powerpc/boot/dts/fsl/tabor-a1222.dts | 17 +++++++++++++++++
+ 2 files changed, 18 insertions(+)
+ create mode 100644 arch/powerpc/boot/dts/fsl/tabor-a1222.dts
+
+diff --git a/arch/powerpc/boot/dts/fsl/Makefile b/arch/powerpc/boot/dts/fsl/Makefile
+index e5526640df9d..d494ee3e04d8 100644
+--- a/arch/powerpc/boot/dts/fsl/Makefile
++++ b/arch/powerpc/boot/dts/fsl/Makefile
+@@ -2,3 +2,4 @@
+ 
+ dtstree		:= $(srctree)/$(src)
+ dtb-$(CONFIG_OF_ALL_DTBS) := $(patsubst $(dtstree)/%.dts,%.dtb, $(wildcard $(dtstree)/*.dts))
++dtb-$(CONFIG_P1022_DS) += tabor-a1222.dtb
+diff --git a/arch/powerpc/boot/dts/fsl/tabor-a1222.dts b/arch/powerpc/boot/dts/fsl/tabor-a1222.dts
+new file mode 100644
+index 000000000000..18271dc3bf5d
+--- /dev/null
++++ b/arch/powerpc/boot/dts/fsl/tabor-a1222.dts
+@@ -0,0 +1,17 @@
++// SPDX-License-Identifier: GPL-2.0-or-later
++/*
++ * AmigaOne A1222 / Tabor base DTS
++ *
++ * This is an initial bring-up placeholder derived from the upstream
++ * P1022DS description. It exists to give the local patch stack a real
++ * board-specific DTS target while the exact peripheral layout is refined.
++ */
++
++/dts-v1/;
++
++#include "p1022ds_36b.dts"
++
++/ {
++	model = "A-EON AmigaOne A1222";
++	compatible = "aeon,tabor", "fsl,P1022DS";
++};
+-- 
+2.39.5

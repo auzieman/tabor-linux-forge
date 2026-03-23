@@ -1,0 +1,2 @@
+# Add local board patches here, one path per line.
+patches/local/0001-powerpc-dts-fsl-add-tabor-a1222-base-dts.patch
