@@ -121,16 +121,30 @@ at forum-reported SD/MMC block offsets:
 make nativeimg
 ```
 
+Build a wiki-style A1222 disk image with:
+- a FAT boot partition containing `uImage.sdk17.2` and `tabor2.dtb`
+- a second Linux partition intended to appear as `/dev/sda2`
+
+```bash
+make wikiimg
+```
+
 The resulting files land under:
 
 - `artifacts/tabor/zImage`
+- `artifacts/tabor/uImage`
+- `artifacts/tabor/uImage.raw`
+- `artifacts/tabor/uImage.sdk17.2`
 - `artifacts/tabor/dtbs/`
 - `artifacts/tabor/modules/`
 - `artifacts/testbundle/`
 - `artifacts/images/tabor-linux.img`
 - `artifacts/images/tabor-a1222-native.img`
+- `artifacts/images/tabor-a1222-wiki.img`
 
 All normal fetch/configure/build/package actions now run through the root-level Compose file at [docker-compose.yml](/home/auzieman/Projects/tabor-linux-forge/docker-compose.yml), which keeps the toolchain pinned and avoids polluting the host with build dependencies.
+
+For Docker Desktop and image-generation targets, the `kernel-builder` service runs in privileged mode as `root`. That is intentional here: some filesystem and image-construction tools behave poorly or incompletely in heavily restricted containers or under remapped non-root users, even when they are only operating on regular image files.
 
 ## Working Inside The Container
 
@@ -230,6 +244,14 @@ Those paths are ignored in [.gitignore](/home/auzieman/Projects/tabor-linux-forg
 
 The repo does not hardcode a single Gentoo patch tarball yet. Instead, the example Gentoo profiles and series files give you a repeatable place to stage the exact source tarball and extracted patch members you want to test. That is intentional, because Tabor bring-up will likely require trying a conservative longterm base first and then adjusting the Gentoo layer on top.
 
+Current direction after inspecting the known Debian image:
+
+- keep Gentoo as a later userspace track
+- do not let Gentoo drive the immediate boot-format work
+- treat the A1222 boot wrapper and firmware expectations as the first blocker
+
+See [reverse-engineering-notes.md](/home/auzieman/Projects/tabor-linux-forge/docs/reverse-engineering-notes.md) for the current findings from the shipped Debian `powerpcspe` image.
+
 ## Current Tabor DTS Strategy
 
 The local patch stack now stages a minimal board DTS at:
@@ -237,6 +259,11 @@ The local patch stack now stages a minimal board DTS at:
 - `arch/powerpc/boot/dts/fsl/tabor-a1222.dts`
 
 That DTS is intentionally conservative and currently derives from the upstream `p1022ds_36b.dts` path. It is a starting point for real board bring-up, not a final hardware description.
+
+For U-Boot image generation, the default profiles now prefer a DTB-specific
+`uImage.tabor-a1222` style target over the generic zero-address `uImage`
+artifact. That is intentional: older PPC U-Boot paths often behave better with
+board-targeted wrapped images than with the plain generic image.
 
 ## Test Bundle Strategy
 
@@ -260,6 +287,7 @@ The staged bundle currently contains:
 
 - `artifacts/testbundle/boot/zImage`
 - `artifacts/testbundle/boot/uImage`
+- `artifacts/testbundle/boot/uImage.sdk17.2`
 - `artifacts/testbundle/boot/tabor-a1222.dtb`
 - `artifacts/testbundle/boot/tabor2.dtb`
 - `artifacts/testbundle/menu/boot.cmd.txt`
@@ -307,6 +335,37 @@ Those offsets are based on user-reported working A1222/Tabor layouts from the
 Amigans forum thread and should be treated as an experimental native-boot path,
 not a finished release image.
 
+## A1222 Wiki-Style Image
+
+`make wikiimg` creates:
+
+- `artifacts/images/tabor-a1222-wiki.img`
+
+This image is shaped to match the public A1222 Linux wiki expectations more closely:
+
+- partition 1: FAT boot partition
+- partition 2: Linux partition intended to be `/dev/sda2`
+- boot files named `uImage.sdk17.2` and `tabor2.dtb`
+
+The current builder also stages `uImage.sdk17.2` as a wrapped blob with the
+embedded legacy U-Boot image placed at offset `0x440200`, based on inspection
+of the shipped Debian image.
+
+That aligns with the manual boot sequence documented on the Amiga wiki:
+
+```text
+setenv bootargs root=/dev/sda2 rootdelay=5
+fatload usb 0:1 1000000 uImage.sdk17.2
+fatload usb 0:1 2000000 tabor2.dtb
+bootm 1000000 - 2000000
+```
+
+Important:
+
+- this is closer to the known boot shape, but it is still not a full Debian image
+- the second partition is currently a placeholder, not a populated root filesystem
+- use it to validate the boot path before expecting a complete Linux userspace
+
 At this stage, success means:
 
 - serial console output appears
@@ -323,6 +382,8 @@ It does **not** yet require:
 
 ## Next Steps
 
+- inspect and reproduce the outer wrapper of `uImage.sdk17.2`
+- compare the mounted Debian image's boot partition once available
 - identify or author a Tabor-specific DTS path
 - validate boot expectations with the board firmware and U-Boot flow
 - add a tiny initramfs for non-destructive shell and benchmark booting

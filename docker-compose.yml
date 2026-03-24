@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: docker/kernel/Dockerfile
     image: tabor-linux-forge-kernel
+    privileged: true
     working_dir: /workspace
     volumes:
       - .:/workspace
@@ -12,6 +13,6 @@ services:
       CROSS_COMPILE: ${CROSS_COMPILE:-powerpc-linux-gnu-}
       KERNEL_PROFILE: ${KERNEL_PROFILE:-profiles/kernel/upstream-6.6-lts.env}
       HOME: /tmp
-    user: "${UID:-1000}:${GID:-1000}"
+    user: "0:0"
     stdin_open: true
     tty: true

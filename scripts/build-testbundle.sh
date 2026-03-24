@@ -10,6 +10,7 @@ KERNEL_IMAGE="${ARTIFACT_DIR}/zImage"
 DTB_SOURCE="${ARTIFACT_DIR}/dtbs/fsl/tabor-a1222.dtb"
 FALLBACK_DTB="${ARTIFACT_DIR}/dtbs/fsl/p1022ds_36b.dtb"
 UIMAGE_SOURCE="${ARTIFACT_DIR}/uImage"
+WRAPPED_UIMAGE_SOURCE="${ARTIFACT_DIR}/uImage.sdk17.2"
 
 if [[ ! -f "${KERNEL_IMAGE}" ]]; then
   echo "Packaged kernel image missing. Run ./scripts/package-kernel.sh first." >&2
@@ -22,6 +23,10 @@ cp "${KERNEL_IMAGE}" "${BOOT_DIR}/zImage"
 
 if [[ -f "${UIMAGE_SOURCE}" ]]; then
   cp "${UIMAGE_SOURCE}" "${BOOT_DIR}/uImage"
+fi
+
+if [[ -f "${WRAPPED_UIMAGE_SOURCE}" ]]; then
+  cp "${WRAPPED_UIMAGE_SOURCE}" "${BOOT_DIR}/uImage.sdk17.2"
 fi
 
 if [[ -f "${DTB_SOURCE}" ]]; then

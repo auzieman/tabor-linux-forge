@@ -12,11 +12,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     flex \
     gcc-powerpc-linux-gnu \
     git \
+    gdisk \
     kmod \
     libelf-dev \
     libssl-dev \
+    parted \
     make \
     mtools \
+    e2fsprogs \
     rsync \
     u-boot-tools \
     wget \

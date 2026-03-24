@@ -12,10 +12,10 @@ DTB_BLOCK="${A1222_DTB_BLOCK:-0x32000}"
 UIMAGE_BLOCK="${A1222_UIMAGE_BLOCK:-0x35000}"
 IMAGE_SIZE_MB="${A1222_NATIVE_IMAGE_SIZE_MB:-128}"
 DTB_PATH="${ARTIFACT_DIR}/dtbs/fsl/tabor2.dtb"
-UIMAGE_PATH="${ARTIFACT_DIR}/uImage"
+UIMAGE_PATH="${ARTIFACT_DIR}/uImage.sdk17.2"
 
 if [[ ! -f "${UIMAGE_PATH}" ]]; then
-  echo "uImage missing. Run ./scripts/package-kernel.sh first." >&2
+  echo "uImage.sdk17.2 missing. Run ./scripts/package-kernel.sh first." >&2
   exit 1
 fi
 
@@ -41,7 +41,7 @@ A1222 native image
 
 This raw image stages:
 - tabor2.dtb at block ${DTB_BLOCK}
-- uImage at block ${UIMAGE_BLOCK}
+- uImage.sdk17.2 at block ${UIMAGE_BLOCK}
 
 Defaults:
 - sector size: ${SECTOR_SIZE}

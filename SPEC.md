@@ -91,6 +91,24 @@ Those tracks should share the same local Tabor patch and config layering model s
 
 1. Build bootable kernel artifacts from the container workflow
 2. Establish the correct DTS / boot handoff for A1222
-3. Validate serial output on real hardware
-4. Add minimal rootfs generation
-5. Move on to networking and package-management bring-up
+3. Reproduce the board-specific boot wrapper expected by shipped A1222 images
+4. Validate serial output on real hardware
+5. Add minimal rootfs generation
+6. Move on to networking and package-management bring-up
+
+## Gentoo Direction
+
+Gentoo remains an intended target userspace path, but it should not currently
+drive the boot-format work.
+
+The observed Debian `powerpcspe` image suggests:
+
+- boot compatibility is the immediate blocker
+- the root filesystem can remain comparatively conventional
+- the real mystery is the wrapped kernel boot artifact and firmware interaction
+
+So the near-term strategy is:
+
+1. reproduce the known-good boot wrapper behavior
+2. keep rootfs generation simple and pragmatic
+3. revisit Gentoo once the board boots reliably from reproducible media
