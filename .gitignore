@@ -2,3 +2,6 @@ build/
 downloads/
 out/
 artifacts/
+logs/
+upstream/
+work/
