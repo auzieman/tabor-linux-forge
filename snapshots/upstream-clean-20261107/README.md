@@ -48,3 +48,18 @@ No glibc update was required for this freestanding build. The project's patched
 Trixie glibc2.41 runtime validation and modern SPE userspace compiler restoration
 are separate SDK tasks; ordinary PowerPC GCC14 kernel compilation does not
 establish a modern SPE userspace ABI.
+
+## Subsequent QEMU gate
+
+A separate QEMU configuration of this clean source boots a single e500v2 CPU
+and reaches a shell. Eight of nine existing SPE ABI checks pass (fenv still
+fails); software/SPE fractal images match. With two CPUs, startup stalls before
+userspace; a temporary nosmap control also stalls. These are QEMU10.0.13 results,
+not physical Radeon acceptance. The old rescue root is not a complete Trixie
+installation or a GCC14-built SPE userspace.
+
+A matching hardware update bundle is staged inactive on the user's live A1222.
+The working kernel, early firmware and boot.scr are unchanged; no reboot was
+performed while this startup gate remains unresolved. Evidence is retained in
+canonical commit54a5abd. Fresh modern SPE compiler/libgcc/libc qualification is
+the next foundation task before rebuilding the workstation archive.
