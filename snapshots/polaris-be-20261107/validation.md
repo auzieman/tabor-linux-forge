@@ -30,3 +30,15 @@ SPE userspace remain separate validation gates.
 
 Detailed private lab evidence is retained with canonical commit 729e3b1.
 Only this sanitized summary is exported; no lab credentials or raw ROM dumps.
+
+## Additional negative isolation trial
+
+A subsequent fresh-boot trial used the earlier native-MQD-staging candidate002
+(module SHA256 `f6475b61ef7affae8fff7cbd008ef2a70090f96327f3c7a0cd8d2d9adb5e2e49`)
+with the upstream `num_kcq=0` parameter. This is a different candidate from the
+snapshot module: newer GPU MQD-read diagnostics require a compute queue.
+Pre-map KIQ passed, but resource submission was followed by the same PCIe storm
+and lost SSH. Disabling compute queues therefore did not produce a console or
+avoid the fault. The USB root was verified read-only; logs were captured
+off-board. The exact next failing stage remains unproven. No source or manifest
+hashes in this snapshot were changed by this trial.
