@@ -61,3 +61,9 @@ patch-tracked, reproducible AUZiX platform port:
 4. forward-port toward a Trixie-era kernel;
 5. build an AUZiX PowerPC/SPE platform lane.
 
+
+## Clean upstream comparison
+
+[The7.3-rc6 clean GPU-source control](snapshots/upstream-clean-20261107/README.md)
+compiled vmlinux, modules and A1222 DTBs successfully, with only board patches.
+It has not been boot-tested and does not replace the earlier validation record.
