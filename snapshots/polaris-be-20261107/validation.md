@@ -42,3 +42,5 @@ and lost SSH. Disabling compute queues therefore did not produce a console or
 avoid the fault. The USB root was verified read-only; logs were captured
 off-board. The exact next failing stage remains unproven. No source or manifest
 hashes in this snapshot were changed by this trial.
+
+User observed a green screen during this zero-compute-queue trial; no readable console was reported.
