@@ -1,5 +1,29 @@
 # Tabor Linux Forge
 
+Build and hardware-validation exports for A1222/Tabor Linux.
+
+The SDK/toolchain and driver changes are authoritative in
+[amigaos-toolchain_patch](https://github.com/auzieman/amigaos-toolchain_patch).
+This forge consumes pinned exports with only the patches, configuration and
+build instructions needed to reproduce a selected kernel experiment.
+
+## Current experimental work
+
+The `wip/polaris-be` branch carries the
+[2026-11-07 Polaris BE snapshot](snapshots/polaris-be-20261107/README.md).
+Physical boot, networking, SSH and selected SPE probes are milestones already
+reached. Graphics initialization still hangs after stage-checked queue mapping;
+this is **not a working accelerated desktop release**.
+
+Use a work branch for proposed changes and attach hardware validation to exact
+commits and artifact hashes. Keep passing builds distinct from passing physical
+hardware tests. See [contribution guidance](CONTRIBUTING.md).
+
+## Historical vendor baseline
+
+The material below documents the earlier source intake and remains preserved.
+
+
 AUZiX-side source workbench for the A1222/Tabor Linux port.
 
 This repository tracks the small, reviewable vendor enablement pieces first:
