@@ -1,0 +1,12 @@
+{
+  "canonical_repository": "auzieman/amigaos-toolchain_patch",
+  "canonical_commit": "4a5876dcf829f245724fb293e617de067df51436",
+  "export_kind": "review-evidence-only",
+  "files_sha256": {
+    "audit.py": "d9c4e3413cd8c608fc9a860a70d017666dbcc795b9dbcbe26840650829692fbb",
+    "audit.json": "ef868de542229682dbc94472466ce349f8c4044e1752f3cf097a76ca1e225ae9"
+  },
+  "new_kernel_exported": false,
+  "physical_display_accepted": false,
+  "avfs_root_cause_proven": false
+}
