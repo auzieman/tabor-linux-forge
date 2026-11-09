@@ -97,3 +97,12 @@ Source and raw results remain canonical in
 [62cb62c](https://github.com/auzieman/amigaos-toolchain_patch/commit/62cb62c).
 Console and CPU/SPE visual-demo acceptance now pass; GFX IB/accelerated GL
 remain open in [forge issue1](https://github.com/auzieman/tabor-linux-forge/issues/1).
+
+The next desktop milestone can use this accepted2D scanout: Xorg fbdev or
+modesetting with AccelMethod none, followed by software-rendered E. Actual007
+already enables evdev/USB HID, VT/fbcon, Unix sockets, shared memory, tmpfs,
+inotify and epoll; keyboard event nodes exist. The current rescue USB does not
+contain a configured Debian X/E installation. Normal target package closure,
+maintainer scripts, D-Bus/session permissions, fonts and input remain necessary.
+Desktop packaging and the separate GFX IB/accelerated-GL investigation can
+advance independently; a working framebuffer is not a complete workstation.
