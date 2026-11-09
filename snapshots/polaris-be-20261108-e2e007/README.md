@@ -81,3 +81,19 @@ The remaining GFX IB timeout and later engine workloads need their own review
 and bounded validation. No global PCIe byte-swap or x86 CPU emulation is
 introduced. ATOM parameters, native workspaces, SMU tables, GPU rings/IBs,
 writeback and framebuffer pixels retain their separate protocol contracts.
+
+## Confirmed framebuffer fractal follow-up
+
+The user also confirms a correct coloured Mandelbrot image on physical HDMI.
+The existing CPU benchmark generated identical12,288 escape counts using
+software floating point and explicit SPE instructions. Median render times
+were125574us and23846us respectively for the128x96/96-iteration workload,
+excluding presentation. This5.266 ratio applies to that test only.
+
+A separately checked integer-only fbdev presenter enlarged the verified image
+8x to1024x768 over the terminal, preserved the covered pixels in RAM and passed
+complete framebuffer readback. No GPU mode change, rebind or3D API was used.
+Source and raw results remain canonical in
+[62cb62c](https://github.com/auzieman/amigaos-toolchain_patch/commit/62cb62c).
+Console and CPU/SPE visual-demo acceptance now pass; GFX IB/accelerated GL
+remain open in [forge issue1](https://github.com/auzieman/tabor-linux-forge/issues/1).
