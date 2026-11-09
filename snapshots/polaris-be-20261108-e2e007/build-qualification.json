@@ -1,0 +1,44 @@
+{
+  "kernel_release": "6.12.113-tabor-e2e-007",
+  "tools_image": "sha256:2781e11839beffa351f8c411d71b7e2bd1ae0336d24c60b407778c3350dd9da0",
+  "tools": {
+    "powerpc-linux-gnu-gcc": "powerpc-linux-gnu-gcc (Debian 14.2.0-19) 14.2.0",
+    "powerpc-linux-gnu-ld": "GNU ld (GNU Binutils for Debian) 2.44"
+  },
+  "config_sha256": "78024e6fdcab02d5b5c0922551f41feff2c5cbda9bb5444095b23f5e4358b380",
+  "vmlinux_sha256": "7f3b15b6aa06526f7475b7f39295f46af5129be226ba0bf9428bca7645d43dfb",
+  "system_map_sha256": "f62b7989bb24e3bc2570b27109d19a47ce038db85f09b580cdd7b6184dd20bf8",
+  "module_count": 43,
+  "module_verification": {
+    "elf": "ELF32-BE-PowerPC-REL",
+    "vermagic": "6.12.113-tabor-e2e-007 SMP mod_unload modversions relocatable ",
+    "module_sha256": "9ae383a86f58807657ec6965c71021fa6b6c4c4de34bf09438e3a68361f6f475",
+    "export_crcs_checked": true,
+    "hardware_validated": false,
+    "versioned_symbols": 687,
+    "kernel_symvers_sha256": "7ce6a44098e08d521bc33a995774a014609c562587244f95b45cf3546e093593"
+  },
+  "firmware_sha256": {
+    "amdgpu/polaris11_ce.bin": "d1664bd98b69bf21c2fb4e6654860e6648d2a202eeb2175e718982ffb7be1dc5",
+    "amdgpu/polaris11_ce_2.bin": "790ca90f5afa001a858909619a222442bfaec1a1f63c47396d21e0097609e24a",
+    "amdgpu/polaris11_k2_smc.bin": "83dd69a87fdbba335b266d9970cb51c837f89fce33d24b493a8d4db5909d923a",
+    "amdgpu/polaris11_k_mc.bin": "64a2749ae228a5cd2084a877615519a0d18811068f803411545dd9774549b7cf",
+    "amdgpu/polaris11_k_smc.bin": "0224af84c74efe8a437ccac8c45f534bca8127ff532cef711ce7157c2ac9bd52",
+    "amdgpu/polaris11_mc.bin": "b75c34f2b5866128e007c81d4b077f07f21c724cebe8f19b6db5526a02435b6c",
+    "amdgpu/polaris11_me.bin": "784ecf696e9a59b0baec4f010631c32f6bb0971a7965705660ca9244e728992b",
+    "amdgpu/polaris11_me_2.bin": "75dbf9d8d38955de4589e6a2fa20ae22815ebbaa7cd4686ea756b5b519db39c4",
+    "amdgpu/polaris11_mec.bin": "7ad4a0b49e07f1ac9acf1a468385b6fb40f3cf078d048339ff42fbe896306333",
+    "amdgpu/polaris11_mec2.bin": "7ad4a0b49e07f1ac9acf1a468385b6fb40f3cf078d048339ff42fbe896306333",
+    "amdgpu/polaris11_mec2_2.bin": "672b3cc2c5cc12d771b73a031a72641072706c23138a3182964e19ab6546a059",
+    "amdgpu/polaris11_mec_2.bin": "47a976f67dcfb01287e0e8cc1ae252a1e89c1c816e26a4f5f0c8b48b5cbea754",
+    "amdgpu/polaris11_pfp.bin": "ad2ca7d837f09f94491056af88e2d03de55d773a0f86fac238ebb9e13a0a88f8",
+    "amdgpu/polaris11_pfp_2.bin": "22bf71e495e2b7d1c05956f59070151b27ac638dcfa6c35d7e71d9d0183cd08b",
+    "amdgpu/polaris11_rlc.bin": "29fa9e98117f3ade4471987af3398c9d106df04605f8287f045e0950fe6a1fa1",
+    "amdgpu/polaris11_sdma.bin": "e27b3ec976f87e32883b9190e653b20d27f9e77da8dd2d77eeb10c35ee9f1e61",
+    "amdgpu/polaris11_sdma1.bin": "23dd73eb1316d40a681841b4d3d116c5cae6d8317cebe8f5e1f9e5dec6de5c87",
+    "amdgpu/polaris11_smc.bin": "20142b588ada975151efb15e8f3efde254f6e7a453204d99659c314e43954aca",
+    "amdgpu/polaris11_smc_sk.bin": "efa5e768ad6c7e2f754e6bb6b73248d7bd8e7306798eb9054b0f3f7a14223616",
+    "amdgpu/polaris11_uvd.bin": "e05664b587a1585d98db3097cf4a55119ee4af2da68e65d3d43b3f57065a95fb",
+    "amdgpu/polaris11_vce.bin": "3a6bffa5f94054b3593bbe1ad1ba07bde62fa3c4f0734c8cb9f39d901331b810"
+  }
+}

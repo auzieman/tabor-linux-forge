@@ -1,0 +1,122 @@
+{
+  "status": "BLOCKED",
+  "hardware_accessed": false,
+  "codec_suites_passed": true,
+  "reason": "Known encoding/replay checks pass, but complete table/ATOM/device-state coverage is not captured.",
+  "suites": [
+    {
+      "name": "atom-clock",
+      "exit": 0,
+      "elapsed_seconds": 0.57,
+      "status": "PASS"
+    },
+    {
+      "name": "ring-contract",
+      "exit": 0,
+      "elapsed_seconds": 0.32,
+      "status": "PASS"
+    },
+    {
+      "name": "encoder-contract",
+      "exit": 0,
+      "elapsed_seconds": 0.87,
+      "status": "PASS"
+    },
+    {
+      "name": "clock-table-pipeline",
+      "exit": 0,
+      "elapsed_seconds": 0.47,
+      "status": "PASS"
+    },
+    {
+      "name": "native-state-decode",
+      "exit": 0,
+      "elapsed_seconds": 0.77,
+      "status": "PASS"
+    },
+    {
+      "name": "connected-flow",
+      "exit": 0,
+      "elapsed_seconds": 1.32,
+      "status": "PASS"
+    },
+    {
+      "name": "memory-contracts",
+      "exit": 0,
+      "elapsed_seconds": 0.32,
+      "status": "PASS"
+    },
+    {
+      "name": "uvd-decoder",
+      "exit": 0,
+      "elapsed_seconds": 0.42,
+      "status": "PASS"
+    },
+    {
+      "name": "uvd-encoder-payload",
+      "exit": 0,
+      "elapsed_seconds": 0.37,
+      "status": "PASS"
+    },
+    {
+      "name": "powerplay-transition",
+      "exit": 0,
+      "elapsed_seconds": 0.87,
+      "status": "PASS"
+    },
+    {
+      "name": "powerplay-psm",
+      "exit": 0,
+      "elapsed_seconds": 0.57,
+      "status": "PASS"
+    },
+    {
+      "name": "selected-console-pixel-path",
+      "exit": 0,
+      "elapsed_seconds": 0.52,
+      "status": "PASS"
+    },
+    {
+      "name": "display-atom-contracts",
+      "exit": 0,
+      "elapsed_seconds": 0.47,
+      "status": "PASS"
+    },
+    {
+      "name": "selected-modeset-errors",
+      "exit": 0,
+      "elapsed_seconds": 0.62,
+      "status": "PASS"
+    },
+    {
+      "name": "actual-atom-interpreter",
+      "exit": 0,
+      "elapsed_seconds": 1.02,
+      "status": "PASS"
+    },
+    {
+      "name": "connected-display-interpreter",
+      "exit": 0,
+      "elapsed_seconds": 3.27,
+      "status": "PASS"
+    },
+    {
+      "name": "console-glyph-flow",
+      "exit": 0,
+      "elapsed_seconds": 1.32,
+      "status": "PASS"
+    },
+    {
+      "name": "smu-transport",
+      "exit": 0,
+      "elapsed_seconds": 0.37,
+      "status": "PASS"
+    },
+    {
+      "name": "captured-replay",
+      "exit": 0,
+      "elapsed_seconds": 0.72,
+      "status": "PASS"
+    }
+  ]
+}

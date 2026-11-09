@@ -9,11 +9,12 @@ build instructions needed to reproduce a selected kernel experiment.
 
 ## Current experimental work
 
-The `wip/polaris-be` branch carries the
-[2026-11-07 Polaris BE snapshot](snapshots/polaris-be-20261107/README.md).
-Physical boot, networking, SSH and selected SPE probes are milestones already
-reached. Graphics initialization still hangs after stage-checked queue mapping;
-this is **not a working accelerated desktop release**.
+The `wip/polaris-be` branch now carries
+[candidate007 and its physical console result](snapshots/polaris-be-20261108-e2e007/README.md).
+The A1222 reaches readable1920x1080 HDMI text with `amdgpudrmfb` and bound fbcon;
+SSH survives the driver load. The GFX indirect-buffer test still times out, so
+this is **not a working accelerated desktop release**. The earlier
+[2026-11-07 snapshot](snapshots/polaris-be-20261107/README.md) remains preserved.
 
 Use a work branch for proposed changes and attach hardware validation to exact
 commits and artifact hashes. Keep passing builds distinct from passing physical

@@ -1,0 +1,7 @@
+{
+  "canonical_commit": "3290ce7dd9fb8f146a6051bbd97528f91c2c0634",
+  "config_sha256": "78024e6fdcab02d5b5c0922551f41feff2c5cbda9bb5444095b23f5e4358b380",
+  "status": "prepared",
+  "hardware_acceptance": false,
+  "gcc": "14.2.0"
+}

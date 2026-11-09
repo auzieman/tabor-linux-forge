@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "checked_files": 20,
+  "patches": 27,
+  "mismatches": [],
+  "files": {
+    "arch/powerpc/boot/dts/fsl/Makefile": {
+      "export_sha256": "9f06207ce121fa6bf66e22fa4d3e44e4b4180becca5b0e476fa0bcdb3dea16bb",
+      "candidate_sha256": "9f06207ce121fa6bf66e22fa4d3e44e4b4180becca5b0e476fa0bcdb3dea16bb"
+    },
+    "arch/powerpc/boot/dts/fsl/tabor-a1222.dts": {
+      "export_sha256": "d2a2591696ca8a2fa4b31b0137f5f5f2807d1782ef8eace5eeb5109abc4736ad",
+      "candidate_sha256": "d2a2591696ca8a2fa4b31b0137f5f5f2807d1782ef8eace5eeb5109abc4736ad"
+    },
+    "arch/powerpc/platforms/85xx/Kconfig": {
+      "export_sha256": "9b46ee61584f0286605a15eff432b388df2ef186903a0b04902fc669e5b4f54c",
+      "candidate_sha256": "9b46ee61584f0286605a15eff432b388df2ef186903a0b04902fc669e5b4f54c"
+    },
+    "arch/powerpc/platforms/85xx/Makefile": {
+      "export_sha256": "e2f8d083fae6d4c1db4c5e6a6b0cf39f13cdc77f512f6bd5d748210905756b02",
+      "candidate_sha256": "e2f8d083fae6d4c1db4c5e6a6b0cf39f13cdc77f512f6bd5d748210905756b02"
+    },
+    "arch/powerpc/platforms/85xx/tabor.c": {
+      "export_sha256": "1b4e9b97291266f8af33c5c253a6595ae68dcf0756774c1ee6c046e2f83dafc5",
+      "candidate_sha256": "1b4e9b97291266f8af33c5c253a6595ae68dcf0756774c1ee6c046e2f83dafc5"
+    },
+    "drivers/gpu/drm/amd/amdgpu/amdgpu_atombios.c": {
+      "export_sha256": "647f740c382a88061364543f33e044a30b935b048e5f284758451b49c5a958d1",
+      "candidate_sha256": "647f740c382a88061364543f33e044a30b935b048e5f284758451b49c5a958d1"
+    },
+    "drivers/gpu/drm/amd/amdgpu/amdgpu_cgs.c": {
+      "export_sha256": "b63dcd98afb07e2438c4f2fc1f4a1a54c1af80e47a4f24d7b16aa47047a0a645",
+      "candidate_sha256": "b63dcd98afb07e2438c4f2fc1f4a1a54c1af80e47a4f24d7b16aa47047a0a645"
+    },
+    "drivers/gpu/drm/amd/amdgpu/amdgpu_device.c": {
+      "export_sha256": "7d73d41cda4c3a6766c4e5da03109a63696c7fa562c4519a9fe6f2ca9d98854b",
+      "candidate_sha256": "7d73d41cda4c3a6766c4e5da03109a63696c7fa562c4519a9fe6f2ca9d98854b"
+    },
+    "drivers/gpu/drm/amd/amdgpu/amdgpu_ring.c": {
+      "export_sha256": "4ca52c3ca04d1b03a6ac07a7b2663af8360ab66a0a37aac0e4ba24385d06d6fe",
+      "candidate_sha256": "4ca52c3ca04d1b03a6ac07a7b2663af8360ab66a0a37aac0e4ba24385d06d6fe"
+    },
+    "drivers/gpu/drm/amd/amdgpu/amdgpu_ring.h": {
+      "export_sha256": "984222614886f4dd52ec8d74a58e5aec50704772b0d4aedc93b11c95fce1a23f",
+      "candidate_sha256": "984222614886f4dd52ec8d74a58e5aec50704772b0d4aedc93b11c95fce1a23f"
+    },
+    "drivers/gpu/drm/amd/amdgpu/atom.h": {
+      "export_sha256": "674e07c83ea7321f6258754d5eb14554ec780756938edb8b41acb14971fa1f99",
+      "candidate_sha256": "674e07c83ea7321f6258754d5eb14554ec780756938edb8b41acb14971fa1f99"
+    },
+    "drivers/gpu/drm/amd/amdgpu/dce_v11_0.c": {
+      "export_sha256": "6c49bb74910e71645d3c65039ebd5d0401081e4ac63d64bb15b9cf09a0116567",
+      "candidate_sha256": "6c49bb74910e71645d3c65039ebd5d0401081e4ac63d64bb15b9cf09a0116567"
+    },
+    "drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c": {
+      "export_sha256": "a9bc6e3380f100e7ddd8d7011229f07e0beb65868297c882165d3544a5d1d098",
+      "candidate_sha256": "a9bc6e3380f100e7ddd8d7011229f07e0beb65868297c882165d3544a5d1d098"
+    },
+    "drivers/gpu/drm/amd/pm/powerplay/hwmgr/hwmgr.c": {
+      "export_sha256": "315a8b3003d1fd412e7854be2660ad51839dadd545ba6e7340b243f7edad92e7",
+      "candidate_sha256": "315a8b3003d1fd412e7854be2660ad51839dadd545ba6e7340b243f7edad92e7"
+    },
+    "drivers/gpu/drm/amd/pm/powerplay/hwmgr/pp_psm.c": {
+      "export_sha256": "c74446a7aa5c921343ff6e44cfbf6ff68093575407d72d0474aaa29d7d440471",
+      "candidate_sha256": "c74446a7aa5c921343ff6e44cfbf6ff68093575407d72d0474aaa29d7d440471"
+    },
+    "drivers/gpu/drm/amd/pm/powerplay/hwmgr/ppatomctrl.c": {
+      "export_sha256": "8fafb87bfecb736221a402f08b2b795b8adfa21bf831db8f0e7d63702bd672e5",
+      "candidate_sha256": "8fafb87bfecb736221a402f08b2b795b8adfa21bf831db8f0e7d63702bd672e5"
+    },
+    "drivers/gpu/drm/amd/pm/powerplay/hwmgr/smu7_hwmgr.c": {
+      "export_sha256": "44618fe8e8b135fba97b55f79e7988ca41ce16118a6ea49caa04c6b70edabc2b",
+      "candidate_sha256": "44618fe8e8b135fba97b55f79e7988ca41ce16118a6ea49caa04c6b70edabc2b"
+    },
+    "drivers/gpu/drm/amd/pm/powerplay/inc/pp_debug.h": {
+      "export_sha256": "1d04e8f33f749ce1032132ba88272735c397051b10df9dd00bb3dece567e869c",
+      "candidate_sha256": "1d04e8f33f749ce1032132ba88272735c397051b10df9dd00bb3dece567e869c"
+    },
+    "drivers/gpu/drm/amd/pm/powerplay/smumgr/polaris10_smumgr.c": {
+      "export_sha256": "463ad96ccb72e036bfa022bd3c6814c0d4223f39b7b16fbfca8a36234231f9fc",
+      "candidate_sha256": "463ad96ccb72e036bfa022bd3c6814c0d4223f39b7b16fbfca8a36234231f9fc"
+    },
+    "drivers/gpu/drm/amd/pm/powerplay/smumgr/smu7_smumgr.c": {
+      "export_sha256": "83f9d6f3b2a61c9d983c05fd5b2cab7356512bc6365b64734e737a9be34d9fcd",
+      "candidate_sha256": "83f9d6f3b2a61c9d983c05fd5b2cab7356512bc6365b64734e737a9be34d9fcd"
+    }
+  },
+  "config_sha256": "78024e6fdcab02d5b5c0922551f41feff2c5cbda9bb5444095b23f5e4358b380",
+  "hardware_tested": false
+}

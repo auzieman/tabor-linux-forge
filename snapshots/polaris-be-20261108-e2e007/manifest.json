@@ -1,0 +1,149 @@
+{
+  "debian_source": "linux",
+  "debian_version": "6.12.113-1",
+  "source_files": {
+    "linux_6.12.113-1.dsc": {
+      "sha256": "7785e2db803dc74912f2dd4861eb454404cf3b9a2c2120f0cc3efda1f2337fa6",
+      "size": 290418,
+      "url": "https://snapshot.debian.org/file/d679ca71370b2510c3f120ca452503d8d51a9967"
+    },
+    "linux_6.12.113.orig.tar.xz": {
+      "sha256": "2efc477744741f5d580a199ee79c251abb01f899759c621d1af0c3d361380821",
+      "size": 151589656,
+      "url": "https://snapshot.debian.org/file/906275a30c7581f5f23681ae935dfa88fb1aa0a1"
+    },
+    "linux_6.12.113-1.debian.tar.xz": {
+      "sha256": "e2d62aaf6d3771dce7116feea9c419b47d6bbf8cb957153896fbbc276f2a54f9",
+      "size": 1954984,
+      "url": "https://snapshot.debian.org/file/5b62a04c2fd924f77eef7c497d8b4b4f7e4c9d73"
+    }
+  },
+  "build_image": "sha256:2781e11839beffa351f8c411d71b7e2bd1ae0336d24c60b407778c3350dd9da0",
+  "gcc": "14.2.0",
+  "binutils": "GNU ld (GNU Binutils for Debian) 2.44",
+  "canonical_repository": "https://github.com/auzieman/amigaos-toolchain_patch",
+  "canonical_commit": "3290ce7dd9fb8f146a6051bbd97528f91c2c0634",
+  "canonical_role": "authoritative SDK/toolchain/driver development; this snapshot is a build-only consumer",
+  "patches": [
+    {
+      "file": "0001-powerpc-tabor-initial-machine-dts.patch",
+      "sha256": "f661ea76c3ca42ceb1ec1c8f069185e456a5ad4c45807410fac0a773e9d45dd4"
+    },
+    {
+      "file": "0002-powerpc-tabor-match-vendor-compatible.patch",
+      "sha256": "8302d1b1f5f2380ed8541acf632a99b7cdb978d3a30446f6170b02122f4d1175"
+    },
+    {
+      "file": "0003-smu-diagnostics-experiment.patch",
+      "sha256": "40342c31b3c61ed26088333a5762d17bf9087312377306b53b684cbeae0a3cf3"
+    },
+    {
+      "file": "0004-smu7-endian-experiment.patch",
+      "sha256": "556f046ee30cf48278f031d8bd43053fa432d3093c258ad25e0f2fc9e7c60620"
+    },
+    {
+      "file": "0005-smu-toc-experiment.patch",
+      "sha256": "a2fe1755a955e17db2e4846189ec89231e9fdb9032b11c11181398a72c4b60cd"
+    },
+    {
+      "file": "0006-gfx-producer-experiment.patch",
+      "sha256": "9f7a4549e1fd644ec9299de3276ca3967df1d066b9a6ae1ce67b8e9ef2b680d0"
+    },
+    {
+      "file": "0007-gfx-swap-readback-experiment.patch",
+      "sha256": "22903c3c82198046b257de1ef7b2747c5f22edee3b947b6512f3b72aa0024718"
+    },
+    {
+      "file": "0008-gfx-software-le-experiment.patch",
+      "sha256": "84b02a5b6d1a62a14ed0a3ec6b638925f68c13d617902b3a35b0b2a080299104"
+    },
+    {
+      "file": "0009-gfx-queues-le-experiment.patch",
+      "sha256": "211de29cb7317b12bea8794366052fe5c5b4efcecf4c873ddd06fb0d3a2ec73c"
+    },
+    {
+      "file": "0010-gfx-kiq-gate-experiment.patch",
+      "sha256": "13c8c9dd166081ba94fd17aa354a3a5c3148fd3d8f8f1a4205921ddd7b053f91"
+    },
+    {
+      "file": "0011-gfx-mqd-host-experiment.patch",
+      "sha256": "3317ade829eee3fd57e3cd4f815d50d1e8336829d0c088f02af07370fd69e088"
+    },
+    {
+      "file": "0012-gfx-mqd-read-experiment.patch",
+      "sha256": "e96c6d39dbf04add9575bb640b08e854a1234e0106074476285cc049ac06869a"
+    },
+    {
+      "file": "0013-gfx-map-stage-experiment.patch",
+      "sha256": "594761886cfc6c420c2b766f53bee3b087a7a227304a74d7114aeaf39b5dae14"
+    },
+    {
+      "file": "0014-gfx8-upstream-ring-test-corrections.patch",
+      "sha256": "0efbe4546360b2f9044b7dbdf9584595ab68cdd55291be97fb2802ad2c366de5"
+    },
+    {
+      "file": "0015-polaris-postmap-initialization-boundaries.patch",
+      "sha256": "3bfbb27de74dd63fd46ff7dcb33517c91bbe1c3ab9260cd2e4a5dcaa7596f098"
+    },
+    {
+      "file": "0016-smu7-propagate-command-response.patch",
+      "sha256": "0295920ab5d534b927be5aac2b5cf6b09dab878a38e5890e486b9173ef7e127e"
+    },
+    {
+      "file": "0017-polaris-powerplay-call-boundaries.patch",
+      "sha256": "1a235b7736f92fa3783edf193485b3b8027c38578c0626b59c33d43fde811506"
+    },
+    {
+      "file": "0018-polaris-dpm-prerequisite-errors.patch",
+      "sha256": "7285ffbe66a9de5d789d37933d503160ef5a3863e86f57e0d9e393c77e584e25"
+    },
+    {
+      "file": "0019-polaris-avfs-calibration-byte-order.patch",
+      "sha256": "387e192eccbabc117b525cf0473ff74e520921a4dbb2952eed072bf100a350c4"
+    },
+    {
+      "file": "0020-atomctrl-serialize-complete-clock-word.patch",
+      "sha256": "b7ea4f34b7e5d7cceb5031a80fc3f779c0e7f6c6cdfa62eda9aa9a2fba1174ff"
+    },
+    {
+      "file": "0021-polaris-clock-channel-evidence.patch",
+      "sha256": "986a1ac423a2b72aa8bf3538fdbbb5b2d5d50154f3024893aa069e0409156a89"
+    },
+    {
+      "file": "0022-amdgpu-share-atom-clock-word-boundary.patch",
+      "sha256": "a5dbb773c0e2b2e5fd5feee496afb7a07059f6833fab0c9fce9e14697d4990e2"
+    },
+    {
+      "file": "0023-polaris11-uvd-encoder-shared-le.patch",
+      "sha256": "f70e0f05d1ac3746f7bcd4ebf02fdcc023b0c2023672391e3b7ad3cc0362e0ac"
+    },
+    {
+      "file": "0024-smu7-decode-native-state-clocks.patch",
+      "sha256": "2a518cebfea1123e2406231883a7a1395a4446b9a225bbd5efe34376d5728a6f"
+    },
+    {
+      "file": "0025-smu7-stop-state-transition-on-error.patch",
+      "sha256": "cd15e56661ff447d0fc6d5b4eee8215419f339b14939cc76fe79939a418eadbd"
+    },
+    {
+      "file": "0026-powerplay-propagate-state-transition-failure.patch",
+      "sha256": "a4f05ce909c1c04b257e1b4db9e2565eb879736aa7d7dfe93a2d36080ea1612b"
+    },
+    {
+      "file": "0027-dce11-propagate-surface-programming-failure.patch",
+      "sha256": "87b3ee07b22450e7524f7d5b2820dedd18cd73444fdf4193b66bc91f18c48849"
+    }
+  ],
+  "config_sha256": "78024e6fdcab02d5b5c0922551f41feff2c5cbda9bb5444095b23f5e4358b380",
+  "tested_module_sha256": "9ae383a86f58807657ec6965c71021fa6b6c4c4de34bf09438e3a68361f6f475",
+  "snapshot_status": "physical-console-pass-gfx-indirect-buffer-timeout",
+  "arch": "powerpc",
+  "cross_compile": "powerpc-linux-gnu-",
+  "kernel_release": "6.12.113-tabor-e2e-007",
+  "hardware_acceptance": false,
+  "physical_boot_accepted": true,
+  "physical_console_accepted": true,
+  "full_gpu_acceleration_accepted": false,
+  "canonical_validation_commit": "c89c3cda28639288695770363b93f6c42e2bb2fa",
+  "code_commit_note": "canonical_commit pins source changes; canonical_validation_commit adds the physical console trial and USB receipt."
+}
