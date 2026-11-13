@@ -1,0 +1,24 @@
+{
+  "status": "development-baseline-not-release-qualified",
+  "target": "powerpc-linux-gnuspe",
+  "debian_architecture": "powerpcspe",
+  "cpu": "P1022 e500v2",
+  "endian": "big",
+  "bits": 32,
+  "distribution": "Debian Trixie-derived Tabor Linux Forge",
+  "required_gcc_major": 14,
+  "gcc_source_version": "14.2.0-19",
+  "glibc_source_version": "2.41-12+deb13u4",
+  "source_snapshot": "20261102T220000Z",
+  "kernel_family": "6.12",
+  "authoritative_project": "https://github.com/auzieman/amigaos-toolchain_patch",
+  "qualified_sdk_export": null,
+  "toolchain_export_commit": null,
+  "package_loop_enabled": false,
+  "gcc8_artifacts": "historical-bootstrap-only",
+  "publication_includes": [
+    ".agents/skills",
+    ".agents/prompts"
+  ],
+  "development_checkpoint_commit": "b5d56fc166e0c9a7aec299c74fd739c05f174f54"
+}

@@ -7,6 +7,16 @@ The SDK/toolchain and driver changes are authoritative in
 This forge consumes pinned exports with only the patches, configuration and
 build instructions needed to reproduce a selected kernel experiment.
 
+## Trixie / GCC14 distribution work
+
+The next distribution baseline is **GCC14 / powerpcspe**. See the
+[verified checkpoint and remaining gates](docs/trixie-spe-baseline.md),
+[build skill](.agents/skills/tabor-port-pipeline/SKILL.md) and
+[continuation prompts](.agents/prompts/resume-trixie-spe.md).
+These workflow files are part of future reviewed source exports. The GCC14 SDK
+and installed workstation are not yet release-qualified; earlier GCC8 packages
+remain bootstrap history.
+
 ## Current experimental work
 
 The `wip/polaris-be` branch now carries
