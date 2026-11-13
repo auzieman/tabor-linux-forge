@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "status": "planned-not-assembled",
+  "architecture": "powerpcspe",
+  "required_gcc_major": 14,
+  "distribution": "trixie",
+  "repository_suite": "tabor-trixie",
+  "repository_components": ["main"],
+  "bootstrap_tool": "mmdebstrap",
+  "variant": "minbase",
+  "runtime_dependency_authority": "Debian apt Depends/Pre-Depends",
+  "include": [
+    "apt", "bash", "coreutils", "dpkg",
+    "systemd-sysv", "udev",
+    "ifupdown", "iproute2", "dhcpcd-base",
+    "openssh-server", "ca-certificates", "locales",
+    "less", "nano"
+  ],
+  "required_acceptance": [
+    "qualified GCC14 SDK and target-runtime provenance",
+    "signed target archive resolves minbase and selected runtime closure",
+    "normal package configuration and triggers complete",
+    "dpkg --audit is empty and apt-get check succeeds",
+    "boot to working console login and bash",
+    "persistent filesystem mounts and device setup",
+    "DHCP or explicit network setup and key-authenticated SSH",
+    "apt installs and configures an additional signed package",
+    "clean shutdown and repeat boot preserve installation"
+  ],
+  "later_layers": ["software X11", "Enlightenment", "desktop utilities", "installer"],
+  "not_required_for_base": ["3D acceleration", "AmigaOS partition resizing", "all development packages"]
+}

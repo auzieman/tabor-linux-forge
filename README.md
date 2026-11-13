@@ -9,6 +9,9 @@ build instructions needed to reproduce a selected kernel experiment.
 
 ## Trixie / GCC14 distribution work
 
+The first deliverable is a [complete Debian base boot image](docs/debian-base-image.md),
+then software X11/Enlightenment as installable layers.
+
 The next distribution baseline is **GCC14 / powerpcspe**. See the
 [verified checkpoint and remaining gates](docs/trixie-spe-baseline.md),
 [build skill](.agents/skills/tabor-port-pipeline/SKILL.md) and
@@ -78,3 +81,10 @@ patch-tracked, reproducible AUZiX platform port:
 [The7.3-rc6 clean GPU-source control](snapshots/upstream-clean-20261107/README.md)
 compiled vmlinux, modules and A1222 DTBs successfully, with only board patches.
 It has not been boot-tested and does not replace the earlier validation record.
+
+AlpinE applications, utilities and artwork are staged as a source-port intake:
+[desktop intake](docs/alpine-desktop-port.md),
+[candidate inventory](profiles/alpine-desktop-port.json).
+
+
+2026-11-13 update: [desktop/GPU checkpoint](docs/desktop-gpu-checkpoint-20261113.md) supersedes earlier pending/running status where noted. The build queue is idle/infrastructure-failed; the60FPS diagnostic cube does not establish installed desktop acceptance.

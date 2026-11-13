@@ -20,5 +20,16 @@
     ".agents/skills",
     ".agents/prompts"
   ],
-  "development_checkpoint_commit": "b5d56fc166e0c9a7aec299c74fd739c05f174f54"
+  "development_checkpoint_commit": "1ca2418fbc36f9844527958ef0297ab7a03de11a",
+  "next_image_profile": "profiles/debian-base-image.json",
+  "graphics_goal": "2D console and software X11/Enlightenment",
+  "gpu_checkpoint": {
+    "source_commit": "1ca2418fbc36f9844527958ef0297ab7a03de11a",
+    "manifest": "patches/mesa/polaris-be-20261113/manifest.json",
+    "acceptance": "visible-cube-with-vs-ps-debug-only",
+    "fps": 60.11346,
+    "normal_mode": "grey-unresolved",
+    "desktop_installation": "not-validated"
+  },
+  "build_checkpoint": "idle-infrastructure-failed"
 }

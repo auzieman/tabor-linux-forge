@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "source_project": "AlpinE",
+  "source_commit": "382a7e74ca486c925ead13262e9ffcf81b26f392",
+  "scope": "Recorded local recipe candidates, not a version/source dependency lock or build acceptance",
+  "target_architecture": "powerpcspe",
+  "compiler_major": 14,
+  "package_manager": "apt/dpkg",
+  "session": "X11/Enlightenment",
+  "rendering": "2D software plus software OpenGL; hardware acceleration deferred",
+  "core_versions_match_frozen_debian": {
+    "efl": "1.28.1",
+    "enlightenment": "0.27.1",
+    "terminology": "1.14.0"
+  },
+  "packages": [
+    {
+      "name": "efl",
+      "observed_recipe_version": "1.28.1",
+      "alpine_arch": "all",
+      "recipe": "aports/efl/APKBUILD",
+      "recipe_sha256": "a8c80398e9baf5eae0f57759376700779188bf4d0ac5fb41dea064b62d98173c",
+      "stage": "existing-debian-core",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "enlightenment",
+      "observed_recipe_version": "0.27.1",
+      "alpine_arch": "all",
+      "recipe": "aports/enlightenment/APKBUILD",
+      "recipe_sha256": "b557ae43aa18d382578793825aadd811929cc9f6c8639fa35305f7f9a1374db5",
+      "stage": "existing-debian-core",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "terminology",
+      "observed_recipe_version": "1.14.0",
+      "alpine_arch": "all !s390x",
+      "recipe": "aports/terminology/APKBUILD",
+      "recipe_sha256": "73d0f7888b0e4ba9a74eb0b64a03aba13836b4910847534a069cfc0ab56528fa",
+      "stage": "existing-debian-core",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "ecrire",
+      "observed_recipe_version": "0.2.0",
+      "alpine_arch": "all",
+      "recipe": "aports/ecrire/APKBUILD",
+      "recipe_sha256": "99523dd6c699218fbae325a235a1899038531b3ad80b26a911a8e5ae438d67b7",
+      "stage": "application-source-port",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "ephoto",
+      "observed_recipe_version": "1.6.0",
+      "alpine_arch": "all",
+      "recipe": "aports/ephoto/APKBUILD",
+      "recipe_sha256": "317711ab4069688b762267de8c29b81de4334725714d037c5d57d806d04005fb",
+      "stage": "application-source-port",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "evisum",
+      "observed_recipe_version": "2.0.12",
+      "alpine_arch": "all",
+      "recipe": "aports/evisum/APKBUILD",
+      "recipe_sha256": "ae36cc71733b0ac800033c3a9e3b6503aa80d7bbe203c470d3ee5b37a00558da",
+      "stage": "application-source-port",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "ejamz",
+      "observed_recipe_version": "0.1.0",
+      "alpine_arch": "x86_64",
+      "recipe": "aports/ejamz/APKBUILD",
+      "recipe_sha256": "bd17e9ad5d8a26423d9f1d4d1c8c3ec4700087e52acf3b2c655652935db61980",
+      "stage": "application-source-port",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "alpine-spin-wallpapers",
+      "observed_recipe_version": "20260919",
+      "alpine_arch": "noarch",
+      "recipe": "aports/alpine-spin-wallpapers/APKBUILD",
+      "recipe_sha256": "32fc422d066fbf38952b2bee9a18976fd8971a7902cb1a7602e83adfa3f9cc66",
+      "stage": "desktop-assets",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "blackknight-wallpapers",
+      "observed_recipe_version": "0.1.0",
+      "alpine_arch": "noarch",
+      "recipe": "aports/blackknight-wallpapers/APKBUILD",
+      "recipe_sha256": "71f4e6a76e5c4ec41c4c820ba35ac0bda25d94689fc4c69e6f1206c12cbf9701",
+      "stage": "desktop-assets",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "alpine-spin-themes",
+      "observed_recipe_version": "20260919",
+      "alpine_arch": "noarch",
+      "recipe": "aports/alpine-spin-themes/APKBUILD",
+      "recipe_sha256": "46f0fe862786af9c908514e9ce19a66a8e414de684080c29eee4fd4faa2c3272",
+      "stage": "desktop-assets",
+      "status": "inventoried-not-imported"
+    },
+    {
+      "name": "eifyd-installer",
+      "observed_recipe_version": "0.2.0",
+      "alpine_arch": "all",
+      "recipe": "aports/eifyd-installer/APKBUILD",
+      "recipe_sha256": "300b18f20c233c29ff99055afa99414c39bfe8e59ce857a966a750ad686ed6f1",
+      "stage": "deferred-installer-backend",
+      "status": "inventoried-not-imported"
+    }
+  ],
+  "utilities": [
+    {
+      "name": "E-control",
+      "source_project": "E-control",
+      "status": "source-review-required",
+      "adaptation": "Debian provider/service integration; X11/Elementary software-rendered session",
+      "source_commit": "1d88a106f0de9f516532f6e4e456ddae8a064f04"
+    },
+    {
+      "name": "auzix-assigns",
+      "source_project": "auzix-assigns",
+      "status": "inventory-required",
+      "adaptation": "Optional utility; retain standard Debian filesystem layout"
+    },
+    {
+      "name": "Enaptic",
+      "source_project": "Enaptic",
+      "source_commit": "530b75d22956edc92d567ecc73aba965d77cc00a",
+      "status": "apt-backend-port-required",
+      "providers": [
+        "apt-dpkg"
+      ],
+      "flatpak": false,
+      "adaptation": "Reuse native EFL UI and queued-change review; replace libapk bridge, planner, helper and repository integration with native APT/dpkg semantics."
+    }
+  ],
+  "acceptance_order": [
+    "Normally installed base with apt/dpkg, networking and SSH",
+    "Xorg and EFL/Enlightenment software session",
+    "Theme/default packages and native E utilities",
+    "Application builds and software OpenGL checks",
+    "A1222 PNY boot and separate physical validation"
+  ],
+  "constraints": [
+    "No installation of musl/x86_64 APK binaries into glibc/powerpcspe root",
+    "Retain exact source/patch/license/recipe hashes when importing",
+    "Use existing Debian source packaging where present; explicit source backports otherwise",
+    "Do not import Alpine OpenRC, apk or GRUB installer actions",
+    "No automatic disk partitioning or default-theme overwrite"
+  ],
+  "selected_additions": [
+    "themes",
+    "wallpapers",
+    "E-control",
+    "E-Jamz",
+    "Enaptic"
+  ],
+  "optional_upstream_apps": [
+    "ecrire",
+    "ephoto",
+    "evisum"
+  ]
+}

@@ -56,3 +56,6 @@ patches, configuration, provenance and build instructions. Keep credentials,
 local account/network configuration, bulk logs and SDK binaries out. Pin exported
 commits/hashes before claiming reproducibility. Publication remains a separate,
 explicitly requested action.
+
+
+2026-11-13 update: [desktop/GPU checkpoint](desktop-gpu-checkpoint-20261113.md) supersedes earlier pending/running status where noted. The build queue is idle/infrastructure-failed; the60FPS diagnostic cube does not establish installed desktop acceptance.

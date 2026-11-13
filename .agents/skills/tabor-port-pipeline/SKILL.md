@@ -3,6 +3,10 @@ name: tabor-port-pipeline
 description: Maintain the Tabor Linux Forge Trixie powerpcspe distribution baseline, reviewed build exports, Debian packaging and staged boot validation. Compiler/backend defects remain in the authoritative toolchain project.
 ---
 Read AGENTS.md, docs/trixie-spe-baseline.md and profiles/trixie-spe-baseline.json.
+For the next deliverable, use docs/debian-base-image.md and
+profiles/debian-base-image.json: prioritize a normally installed minbase plus
+console/network/apt/SSH before the desktop. 2D/software X/E is the graphics goal;
+3D and AmigaOS partition resizing do not block the base image.
 Reconcile retained results and active processes before issuing new work.
 
 Target: P1022/e500v2, powerpcspe, powerpc-linux-gnuspe, ELF32 big endian,
@@ -40,3 +44,11 @@ hardware acceptance from a build or QEMU run.
 Before publication, include .agents/skills and .agents/prompts, verify references
 and provenance, and remove secrets/local-machine details. Publish only when the
 user requests it; this skill does not itself authorize publication.
+
+For AlpinE application, utility and theme intake, read docs/alpine-desktop-port.md
+and profiles/alpine-desktop-port.json. Core EFL/E/Terminology recipes already
+match the frozen Debian versions. Port sources into Debian packages; do not
+install native Alpine APK payloads or import Alpine installer/service actions.
+Keep software X11/E and software GL separate from accelerated-GPU acceptance.
+
+Current handoff: read docs/desktop-gpu-checkpoint-20261113.md before continuing. Reconcile the idle/infrastructure-failed batch before restarting it. Visible60FPS cube requires vs,ps debug; do not enable it as an unconditional desktop default.
